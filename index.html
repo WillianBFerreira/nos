@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NÓS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+           
+        }
+        header {
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            text-shadow: 4px 4px black;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            color: white;
+            text-align: center;
+        }
+        .timer-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+            justify-content: center; /* Centraliza os temporizadores dentro do contêiner */
+            align-items: center; /* Centraliza horizontalmente os temporizadores */
+        }
+        .timer {
+            font-size: 1.5em;
+            background: black;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+
+        }
+        
+        h2 {
+            text-align: center;
+            color: white;
+            font-family: "Open Sans Condensed", sans-serif;
+        }
+        p2 {
+            text-align: center;
+            color: red;
+            font-family: "Open Sans Condensed", sans-serif;
+        }
+        h3 {
+            text-align: center;
+            color: white;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            font-size: 30px;
+        }
+        h4 {
+            text-align: center;
+            color: white;
+            font-family: "Open Sans Condensed", sans-serif;
+            font-size: 20px;
+        }
+        p3 {
+            text-align: center;
+            color: red;
+            font-family: "Open Sans Condensed", sans-serif;
+        }
+        p4 {
+            text-align: center;
+            color: red;
+            font-family: "Open Sans Condensed", sans-serif;
+            font-size: 18px;
+        }
+        p5 {
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+        }
+        
+        p6 {
+            text-align: center;
+            color: red;
+            font-size: 25px;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+        }
+        #info {
+            display: none; /* Inicialmente escondido */
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #333;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        /* Estilos de centralização */
+        .button-container {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            margin-top: 20px; /* Espaçamento superior */
+        }
+        /* Estilo do contêiner que envolve o vídeo */
+        .video-container {
+            display: flex;
+            justify-content: center; /* Centraliza o vídeo horizontalmente */
+            align-items: center; /* Centraliza o vídeo verticalmente, se necessário */
+            
+        }
+        
+
+        /* Estilo do vídeo */
+        .meu-video {
+            max-width: 100%; /* Garante que o vídeo ocupe no máximo 100% da largura da tela */
+            height: auto; /* Ajusta a altura do vídeo proporcionalmente */
+        }
+        a {
+            color: white; /* Troque 'red' pela cor desejada */
+        }
+
+        /* Altera a cor do link quando o mouse passa por cima (hover) */
+        a:hover {
+            color: white; /* Cor ao passar o mouse */
+        }
+
+        /* Altera a cor do link já visitado */
+        a:visited {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nós❤️️</h1>
+</header>
+
+<main>
+    <div id="hello">
+        <h2>Antes, um pequeno teste para ver se você realmente merece o que vem a seguir!</h2>
+        <p2><p><em>Apenas três perguntas simples, mas de extrema importância para o futuro de nós.</em></p></p2>
+        <br>
+            <!-- Botão centralizado -->
+            <div class="button-container">
+                <button onclick="verificarSenha()">Iniciar teste</button>
+            </div>
+    </div>
+    <div id="info">
+        <p3><p>Você conseguiu! Acertou as 3 questões. 😅</p></p3>
+        <h3>Sobre Nós!</h3>
+        <div class="video-container">
+            <video autoplay muted loop width="500" height="300" >
+            <source src="C:\Users\Willian\Desktop\PROJETO\VIDEO\1.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+        <h4>Há quanto tempo estamos juntos?</h4>
+        <div class="timer-container">
+            <p4>Desde o primeiro beijo.</p4>
+            <div id="timer1" class="timer"></div> <!-- Temporizador 1 -->
+            <p4>Desde o pedido de namoro.</p4>
+            <div id="timer2" class="timer"></div> <!-- Temporizador 2 -->
+            <p4>Desde que estamos noivos.</p4>
+            <div id="timer3" class="timer"></div> <!-- Temporizador 3 -->
+        </div>
+        <br>
+        <br>
+        <br>
+        <p5>Sobre nós<br>Desde o início, tudo foi muito leve e calmo. Claro que temos nossos conflitos, mas sempre conseguimos resolvê-los de forma que tudo continue bem. Desde o começo, sempre deu certo, pois a nossa ideia e nossos pensamentos sempre foram alinhados. Como dizem? "Nosso santo bateu."<br></p5>
+        <br>
+        <img src="C:\Users\Willian\Desktop\PROJETO\IMAGENS\1.jpeg" alt="1" width="348" height="600" style="margin: 30px;"  />
+        <br>
+        <p5>Acredito que, nesse tempo juntos, mesmo não sendo muito, evoluímos e crescemos bastante, não só como pessoas, mas também dentro do nosso relacionamento. Amo a forma como nos relacionamos, até mesmo os nossos conflitos, pois eles nos tornam mais maduros. Sei que já crescemos muito e ainda vamos crescer muito mais.</p5>
+        <br>
+        <img src="C:\Users\Willian\Desktop\PROJETO\IMAGENS\2.jpeg" alt="2" width="348" height="600" style="margin: 30px;"  />
+        <br>
+        <p5>Apesar do pouco tempo, já fizemos tantas coisas: muitas viagens, festas, e tudo fica muito melhor quando estamos juntos. E isso é resultado da nossa dedicação um ao outro e, especialmente, ao "nós" que estamos construindo.</p5>
+        <br>
+        <img src="C:\Users\Willian\Desktop\PROJETO\IMAGENS\3.jpeg" alt="3" width="500" height="240" style="margin: 30px;"  />
+        <br>
+        <p5>Graças à nossa mãezinha, Nossa Senhora Aparecida, estamos construindo parte do nosso futuro: a nossa casa. Nos batalhamos muito para chegar até aqui, só nós dois sabemos o quanto lutamos e continuamos lutando para conquistar tudo isso. Como sempre dizemos: "Disseram que não seria fácil, mas não falaram que seria tão difícil assim."</p5>
+        <br>
+        <img src="C:\Users\Willian\Desktop\PROJETO\IMAGENS\4.jpeg" alt="4" width="348" height="600" style="margin: 30px;"  />
+        <br>
+        <p5>Amo o fato que vc se tornou Tricolor assim como eu! assim como a foto abaixo prova.🔴⚪️⚫️</p5>
+        <br>
+        <img src="C:\Users\Willian\Desktop\PROJETO\IMAGENS\SP.jpeg" alt="SP" width="348" height="600" style="margin: 30px;"  />
+        <br>
+        <p5>Tudo isso é só uma forma de mostrar que sempre vou encontrar uma maneira de colocar um sorriso no seu rosto. Te amo!</p5>
+        <br>
+        <img src="C:\Users\Willian\Desktop\PROJETO\IMAGENS\5.jpeg" alt="5" width="348" height="550" style="margin: 30px;"  />
+        <br>
+        <p5>Sobre nós, mesmo dizendo tudo isso, sei que o que o futuro nos reserva é incerto. Mas, com certeza, é algo maravilhoso nos aguardando. Estou ansioso para descobrir o que ele nos proporcionará.</p5>
+        <br>
+        <img src="C:\Users\Willian\Desktop\PROJETO\IMAGENS\6.jpeg" alt="6" width="348" height="600" style="margin: 30px;"  />
+        <br>
+        <p6>"Our future days. Days of you and me"</p6>
+        <br>
+        <p5>Sobre nós, mesmo dizendo tudo isso, sei que o que o futuro nos reserva é incerto. Mas, com certeza, é algo maravilhoso nos aguardando. Estou ansioso para descobrir o que ele nos proporcionará.</p5>
+        <br>
+        <img src="C:\Users\Willian\Desktop\PROJETO\IMAGENS\7.jpeg" alt="7" width="348" height="600" style="margin: 30px;"  />
+        <br>
+        <p6>"I got a woman with eyes that shine. Down deep as a diamond mine. She's my treasure, so very rare. She made me a millionaire"</p6>
+        <br>
+        <a href="https://www.youtube.com/watch?v=GZW5FRdS2OE" target="_blank">
+        Caso deseje ver a musica legendada.
+        </a>
+        <br>
+        <h3>Amo você❤️️</h3>
+            <button onclick="voltar()">Voltar</button>
+        </div>
+    </div>
+</main>
+
+<script>
+    function startTimer(startDate, elementId) {
+    const timerDiv = document.getElementById(elementId);
+
+    function updateTimer() {
+      const now = new Date();
+      const timeDifference = now - startDate;
+
+      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+      timerDiv.textContent = `${days} Dias, ${hours} Horas, ${minutes} Min, ${seconds} s`;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer(); // Exibir imediatamente
+  }
+
+  // Iniciar temporizadores individualmente
+  startTimer(new Date("2021-12-12T03:00:00"), "timer1"); // Temporizador 1
+  startTimer(new Date("2022-02-07T01:30:00"), "timer2"); // Temporizador 2
+  startTimer(new Date("2024-12-12T17:48:00"), "timer3"); // Temporizador 3
+
+    function verificarSenha() {
+        var senha = prompt("Qual o maior clube brasileiro? Dica: é um dos maiores, se não o maior clube do mundo! Digitar apenas a sigla do clube.").toUpperCase();
+        var senhaCorreta = "SPFC"; // Defina aqui a senha correta
+
+        if (senha === senhaCorreta) {
+            verificarSenha2();
+        } else {
+            alert("Você errou 💔, tente novamente.");
+        }
+    }
+
+    function verificarSenha2() {
+        var senha = prompt("Quantos mundiais o SPFC tem?");
+        var senhaCorreta = "3"; // Defina aqui a senha correta
+
+        if (senha === senhaCorreta) {
+            verificarSenha3();
+        } else {
+            alert("Você errou 💔, tente novamente.");
+        }
+     
+    }
+
+    function verificarSenha3() {
+        var senha = prompt("Qual foi a data quando você era pequena, em que sentiu seu coração bater mais forte, aproximandamente 6:30 da manhã. Sentiu que era algo bom, mesmo sem saber o motivo, o qual só foi descobrir anos mais tarde? (usar formato --/--/----)");
+        var senhaCorreta = "25/06/1999"; // Defina aqui a senha correta
+
+        if (senha === senhaCorreta) {
+            mostrarEsconder();
+        } else {
+            alert("Você errou 💔, tente novamente.");
+        }
+
+    }
+
+    function mostrarEsconder() {
+        var info = document.getElementById("info");
+        var hello = document.getElementById("hello");
+        info.style.display = "block"; // Exibe o conteúdo
+        hello.style.display = "none"; // Esconde o conteúdo inicial
+    }
+
+    function voltar() {
+        var info = document.getElementById("info");
+        var hello = document.getElementById("hello");
+        hello.style.display = "block";
+        info.style.display = "none"; // Remove o conteúdo
+    }
+</script>
+
+</body>
+</html>
